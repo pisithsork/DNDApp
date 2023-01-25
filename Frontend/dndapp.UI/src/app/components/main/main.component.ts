@@ -31,6 +31,10 @@ export class MainComponent implements OnInit {
   }
 
   rolld4(numofdice: any){
+    if(Number(numofdice) < 0){
+      alert("Please enter a value greater than 0");
+      return
+    }
     this.d4total = 0;
     this.diceservice.rolld4(Number(numofdice)).subscribe(
       (resp) =>{
@@ -47,6 +51,10 @@ export class MainComponent implements OnInit {
   }
 
   rolld6(numofdice: any){
+    if(Number(numofdice) < 0){
+      alert("Please enter a value greater than 0");
+      return
+    }
     this.d6total = 0;
     this.diceservice.rolld6(Number(numofdice)).subscribe(
       (resp) =>{
@@ -63,6 +71,10 @@ export class MainComponent implements OnInit {
   }
 
   rolld8(numofdice: any){
+    if(Number(numofdice) < 0){
+      alert("Please enter a value greater than 0");
+      return
+    }
     this.d8total = 0;
     this.diceservice.rolld8(Number(numofdice)).subscribe(
       (resp) =>{
@@ -78,6 +90,10 @@ export class MainComponent implements OnInit {
     );
   }
   rolld10(numofdice: any){
+    if(Number(numofdice) < 0){
+      alert("Please enter a value greater than 0");
+      return
+    }
     this.d10total = 0;
     this.diceservice.rolld10(Number(numofdice)).subscribe(
       (resp) =>{
@@ -93,6 +109,10 @@ export class MainComponent implements OnInit {
     );
   }
   rolld12(numofdice: any){
+    if(Number(numofdice) < 0){
+      alert("Please enter a value greater than 0");
+      return
+    }
     this.d12total = 0;
     this.diceservice.rolld12(Number(numofdice)).subscribe(
       (resp) =>{
@@ -108,6 +128,10 @@ export class MainComponent implements OnInit {
     );
   }
   rolld20(numofdice: any){
+    if(Number(numofdice) < 0){
+      alert("Please enter a value greater than 0");
+      return
+    }
     this.d20total = 0;
     this.diceservice.rolld20(Number(numofdice)).subscribe(
       (resp) =>{
@@ -123,6 +147,10 @@ export class MainComponent implements OnInit {
     );
   }
   rolld100(numofdice: any){
+    if(Number(numofdice) < 0){
+      alert("Please enter a value greater than 0");
+      return
+    }
     this.d100total = 0;
     this.diceservice.rolld100(Number(numofdice)).subscribe(
       (resp) =>{

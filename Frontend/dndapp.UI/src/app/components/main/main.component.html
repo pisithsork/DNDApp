@@ -1,102 +1,135 @@
 <h2>Dice Roller</h2>
 
-
+<div class="container-fluid">
 <!-- Roll d4 -->
-<div>
-    <h3>Roll d4</h3>
-    <input #d4s type="number" min="1" class="form-control" id="numofdice" [value]="d4s" enabled
-    />
-    <div>
-        <h4>Total Result: {{ d4total }}</h4>
-        <span *ngFor="let value of d4values; index as i">{{ value }} <span *ngIf="i !== d4values.length - 1">+ </span><span *ngIf="i == d4values.length - 1">= {{ d4total }}</span>
-        </span>
-    </div>
-    <button (click)="rolld4(d4s.value)" type="submit" class="btn btn-block btn-success">Roll d4</button>
-</div>
+        <h3>Roll d4</h3>
+        <div class="form-outline w-25 input-group mb-3">
+            <input #d4s type="number" min="1" class="form-control" id="numofdice" [value]="d4s"
+            />
+            <button (click)="rolld4(d4s.value)" type="submit" class="btn btn-block btn-success">Roll d4</button>
+        </div>
+        <div>
+            <h4>Total Result: {{ d4total }}</h4>
+            <h4><span *ngFor="let value of d4values; index as i">{{ value }} <span *ngIf="i !== d4values.length - 1">+ </span><span *ngIf="i == d4values.length - 1">= {{ d4total }}</span>
+            </span>  
+            </h4>
+        </div>
 <!------------------------------------------------------------------------------------------------------->
 
 <!-- Roll d6 -->
-<div>
-    <h3>Roll d6</h3>
-    <input #d6s type="number" min="1" class="form-control" id="numofdice" [value]="d6s" enabled
-    />
-    <div>
-        <h4>Total Result: {{ d6total }}</h4>
-        <span *ngFor="let value of d6values; index as i">{{ value }} <span *ngIf="i !== d6values.length - 1">+ </span><span *ngIf="i == d6values.length - 1">= {{ d6total }}</span>
-        </span>
-    </div>
+        <h3>Roll d6</h3>
+        <div class="form-outline w-25 input-group mb-3">
+            <input #d6s type="number" min="1" class="form-control" id="numofdice" [value]="d6s"
+            />
+            <button (click)="rolld6(d6s.value)" type="submit" class="btn btn-block btn-success">Roll d6</button>
 
-<button (click)="rolld6(d6s.value)" type="submit" class="btn btn-block btn-success">Roll d6</button>
-</div>
+        </div>
+        <div>
+            <h4>Total Result: {{ d6total }}</h4>
+            <h4><span *ngFor="let value of d6values; index as i">{{ value }} <span *ngIf="i !== d6values.length - 1">+ </span><span *ngIf="i == d6values.length - 1">= {{ d6total }}</span>
+            </span> 
+            </h4>
+        </div>
 
 <!------------------------------------------------------------------------------------------------------->
 
 <!-- Roll d8 -->
-<div>
-    <h3>Roll d8</h3>
-    <input #d8s type="number" min="1" class="form-control" id="numofdice" [value]="d8s" enabled
-    />
     <div>
-        <h4>Total Result: {{ d8total }}</h4>
-        <span *ngFor="let value of d8values; index as i">{{ value }} <span *ngIf="i !== d8values.length - 1">+ </span><span *ngIf="i == d8values.length - 1">= {{ d8total }}</span>
-        </span>
+        <h3>Roll d8</h3>
+        <div class="form-outline w-25 input-group mb-3">
+            <input #d8s type="number" min="1" class="form-control" id="numofdice" [value]="d8s"
+            />
+            <button (click)="rolld8(d8s.value)" type="submit" class="btn btn-block btn-success">Roll d8</button>
+        </div>
+        <div>
+            <h4>Total Result: {{ d8total }}</h4>
+            <h4><span *ngFor="let value of d8values; index as i">{{ value }} <span *ngIf="i !== d8values.length - 1">+ </span><span *ngIf="i == d8values.length - 1">= {{ d8total }}</span>
+            </span>
+            </h4>
+            
+        </div>
+        
     </div>
-    <button (click)="rolld8(d8s.value)" type="submit" class="btn btn-block btn-success">Roll d8</button>
-</div>
 <!------------------------------------------------------------------------------------------------------->
 
 <!-- Roll d10 -->
-<div>
-    <h3>Roll d10</h3>
-    <input #d10s type="number" min="1" class="form-control" id="numofdice" [value]="d10s" enabled
-    />
     <div>
-        <h4>Total Result: {{ d10total }}</h4>
-        <span *ngFor="let value of d10values; index as i">{{ value }} <span *ngIf="i !== d10values.length - 1">+ </span><span *ngIf="i == d10values.length - 1">= {{ d10total }}</span>
-        </span>
+        <h3>Roll d10</h3>
+        <div class="form-outline w-25 input-group mb-3">
+            <input #d10s type="number" min="1" class="form-control" id="numofdice" [value]="d10s"
+            />
+            <button (click)="rolld10(d10s.value)" type="submit" class="btn btn-block btn-success">Roll d10</button>
+        </div>
+        <div>
+            <h4>Total Result: {{ d10total }}</h4>
+            <h4><span *ngFor="let value of d10values; index as i">{{ value }} <span *ngIf="i !== d10values.length - 1">+ </span><span *ngIf="i == d10values.length - 1">= {{ d10total }}</span>
+            </span>
+            </h4>
+        </div>
+        
     </div>
-    <button (click)="rolld10(d10s.value)" type="submit" class="btn btn-block btn-success">Roll d10</button>
-</div>
 <!------------------------------------------------------------------------------------------------------->
 
 <!-- Roll d12 -->
-<div>
-    <h3>Roll d12</h3>
-    <input #d12s type="number" min="1" class="form-control" id="numofdice" [value]="d12s" enabled
-    />
     <div>
-        <h4>Total Result: {{ d12total }}</h4>
-        <span *ngFor="let value of d12values; index as i">{{ value }} <span *ngIf="i !== d12values.length - 1">+ </span><span *ngIf="i == d12values.length - 1">= {{ d12total }}</span>
-        </span>
+        <h3>Roll d12</h3>
+        <div class="form-outline w-25 input-group mb-3">
+            <input #d12s type="number" min="1" class="form-control" id="numofdice" [value]="d12s"
+            />
+            <button (click)="rolld12(d12s.value)" type="submit" class="btn btn-block btn-success">Roll d12</button>
+        </div>
+
+        <div>
+            <h4>Total Result: {{ d12total }}</h4>
+            <h4><span *ngFor="let value of d12values; index as i">{{ value }} <span *ngIf="i !== d12values.length - 1">+ </span><span *ngIf="i == d12values.length - 1">= {{ d12total }}</span>
+            </span>
+            </h4>
+            
+        </div>
+
     </div>
-    <button (click)="rolld12(d12s.value)" type="submit" class="btn btn-block btn-success">Roll d12</button>
-</div>
 <!------------------------------------------------------------------------------------------------------->
 
 <!-- Roll d20 -->
-<div>
-    <h3>Roll d20</h3>
-    <input #d20s type="number" min="1" class="form-control" id="numofdice" [value]="d20s" enabled
-    />
     <div>
-        <h4>Total Result: {{ d20total }}</h4>
-        <span *ngFor="let value of d20values; index as i">{{ value }} <span *ngIf="i !== d20values.length - 1">+ </span><span *ngIf="i == d20values.length - 1">= {{ d20total }}</span>
-        </span>
+        <h3>Roll d20</h3>
+        <div class="form-outline w-25 input-group mb-3">
+
+            <input #d20s type="number" min="1" class="form-control" id="numofdice" [value]="d20s" enabled
+            />
+            <button (click)="rolld20(d20s.value)" type="submit" class="btn btn-block btn-success">Roll d20</button>
+        </div>
+
+        <div>
+            <h4>Total Result: {{ d20total }}</h4>
+            <h4><span *ngFor="let value of d20values; index as i">{{ value }} <span *ngIf="i !== d20values.length - 1">+ </span><span *ngIf="i == d20values.length - 1">= {{ d20total }}</span>
+            </span>
+            </h4>
+            
+        </div>
+        
     </div>
-    <button (click)="rolld20(d20s.value)" type="submit" class="btn btn-block btn-success">Roll d20</button>
-</div>
 <!------------------------------------------------------------------------------------------------------->
 
 <!-- Roll d100 -->
-<div>
-    <h3>Roll d100</h3>
-    <input #d100s type="number" min="1" class="form-control" id="numofdice" [value]="d100s" enabled
-    />
     <div>
-        <h4>Total Result: {{ d100total }}</h4>
-        <span *ngFor="let value of d100values; index as i">{{ value }} <span *ngIf="i !== d100values.length - 1">+ </span><span *ngIf="i == d100values.length - 1">= {{ d100total }}</span>
-        </span>
+
+        <h3>Roll d100</h3>
+        <div class="form-outline w-25 input-group mb-3">
+
+            <input #d100s type="number" min="1" class="form-control" id="numofdice" [value]="d100s" enabled
+            />
+            <button (click)="rolld100(d100s.value)" type="submit" class="btn btn-block btn-success">Roll d100</button>
+        </div>
+
+        <div>
+            <h4>Total Result: {{ d100total }}</h4>
+            <h4><span *ngFor="let value of d100values; index as i">{{ value }} <span *ngIf="i !== d100values.length - 1">+ </span><span *ngIf="i == d100values.length - 1">= {{ d100total }}</span>
+            </span>
+            </h4>
+            
+        </div>
+        
     </div>
-    <button (click)="rolld100(d100s.value)" type="submit" class="btn btn-block btn-success">Roll d100</button>
-</div>
 <!------------------------------------------------------------------------------------------------------->
+</div>
