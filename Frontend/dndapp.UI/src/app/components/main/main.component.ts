@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RolldiceService } from '../../services/rolldice.service';
 
+
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -22,12 +23,18 @@ export class MainComponent implements OnInit {
   d20total: number = 0;
   d100values: any;
   d100total: number = 0;
+  path!: string;
 
   constructor(private diceservice:RolldiceService){
 
   }
 
   ngOnInit(): void {
+  }
+
+  getimage(value: any, dice: string){
+    
+    return './../../../assets/pictures/'+dice+'/'+value.toString()+'.png';
   }
 
   rolld4(numofdice: any){
