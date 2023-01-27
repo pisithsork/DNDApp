@@ -15,7 +15,13 @@ namespace dndapp.API.Controllers
 
         }
 
-        [HttpGet("{numofdice}d4")]
+        [HttpGet("{numofdice}d{dicetype}")]
+        public int[] getresults(int numofdice, int dicetype)
+        {
+            return diceroller.rolldice(numofdice, dicetype);
+        }
+
+/*        [HttpGet("{numofdice}d4")]
         public int[] getd4(int numofdice)
         {
             return diceroller.rolld4(numofdice);
@@ -55,6 +61,6 @@ namespace dndapp.API.Controllers
         public int[] getd100(int numofdice)
         {
             return diceroller.rolld100(numofdice);
-        }
+        }*/
     }
 }
