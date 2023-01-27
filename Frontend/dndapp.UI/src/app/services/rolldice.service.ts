@@ -10,6 +10,10 @@ export class RolldiceService {
 
   constructor(private httpclient: HttpClient) { }
 
+  rolldice(numofdice: number, dicetype: number){
+    return this.httpclient.get(`${this.baseurl}/${numofdice}d${dicetype}`);
+  }
+
   rolld4(numofdice: number){
     return this.httpclient.get(`${this.baseurl}/${numofdice}d4`);
   }

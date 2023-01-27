@@ -8,7 +8,7 @@
             <div class="form-outline w-50 input-group mb-3">
                 <input #d4s type="number" min="1" max="100" class="form-control" id="numofdice" [value]="d4s"
                 />
-                <button (click)="rolld4(d4s.value)" type="submit" class="btn btn-block btn-success">Roll</button>
+                <button (click)="rolld4(d4s.value, 4)" type="submit" class="btn btn-block btn-success">Roll</button>
             </div>
             <div>
                 <h4>Total Result: {{ d4total }}</h4>
@@ -25,7 +25,7 @@
             <div class="form-outline w-50 input-group mb-3">
                 <input #d6s type="number" min="1" max="100" class="form-control" id="numofdice" [value]="d6s"
                 />
-                <button (click)="rolld6(d6s.value)" type="submit" class="btn btn-block btn-success">Roll</button>
+                <button (click)="rolld6(d6s.value, 6)" type="submit" class="btn btn-block btn-success">Roll</button>
 
             </div>
             <div>
@@ -43,7 +43,7 @@
             <div class="form-outline w-50 input-group mb-3">
                 <input #d8s type="number" min="1" max="100" class="form-control" id="numofdice" [value]="d8s"
                 />
-                <button (click)="rolld8(d8s.value)" type="submit" class="btn btn-block btn-success">Roll</button>
+                <button (click)="rolld8(d8s.value, 8)" type="submit" class="btn btn-block btn-success">Roll</button>
             </div>
             <div>
                 <h4>Total Result: {{ d8total }}</h4>
@@ -60,7 +60,7 @@
             <div class="form-outline w-50 input-group mb-3">
                 <input #d10s type="number" min="1" max="100" class="form-control" id="numofdice" [value]="d10s"
                 />
-                <button (click)="rolld10(d10s.value)" type="submit" class="btn btn-block btn-success">Roll</button>
+                <button (click)="rolld10(d10s.value, 10)" type="submit" class="btn btn-block btn-success">Roll</button>
             </div>
             <div>
                 <h4>Total Result: {{ d10total }}</h4>
@@ -79,7 +79,7 @@
             <div class="form-outline w-50 input-group mb-3">
                 <input #d12s type="number" min="1" max="100" class="form-control" id="numofdice" [value]="d12s"
                 />
-                <button (click)="rolld12(d12s.value)" type="submit" class="btn btn-block btn-success">Roll</button>
+                <button (click)="rolld12(d12s.value, 12)" type="submit" class="btn btn-block btn-success">Roll</button>
             </div>
 
             <div>
@@ -97,7 +97,7 @@
             <div class="form-outline w-50 input-group mb-3">
                 <input #d20s type="number" min="1" max="100" class="form-control" id="numofdice" [value]="d20s" enabled
                 />
-                <button (click)="rolld20(d20s.value)" type="submit" class="btn btn-block btn-success">Roll</button>
+                <button (click)="rolld20(d20s.value, 20)" type="submit" class="btn btn-block btn-success">Roll</button>
             </div>
             <div>
                 <h4>Total Result: {{ d20total }}</h4>
@@ -114,7 +114,7 @@
             <div class="form-outline w-50 input-group mb-3">
                 <input #d100s type="number" min="1" max="100" class="form-control" id="numofdice" [value]="d100s" enabled
                 />
-                <button (click)="rolld100(d100s.value)" type="submit" class="btn btn-block btn-success">Roll</button>
+                <button (click)="rolld100(d100s.value, 100)" type="submit" class="btn btn-block btn-success">Roll</button>
             </div>
             <div>
                 <h4>Total Result: {{ d100total }}</h4>

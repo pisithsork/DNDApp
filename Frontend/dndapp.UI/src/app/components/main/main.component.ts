@@ -37,13 +37,13 @@ export class MainComponent implements OnInit {
     return './../../../assets/pictures/'+dice+'/'+value.toString()+'.png';
   }
 
-  rolld4(numofdice: any){
+  rolld4(numofdice: any, dicetype: number){
     if(Number(numofdice) < 0){
       alert("Please enter a value greater than 0");
       return
     }
     this.d4total = 0;
-    this.diceservice.rolld4(Number(numofdice)).subscribe(
+    this.diceservice.rolldice(Number(numofdice), dicetype).subscribe(
       (resp) =>{
         this.d4values = resp
         console.log(this.d4values)
@@ -57,7 +57,7 @@ export class MainComponent implements OnInit {
     );
   }
 
-  rolld6(numofdice: any){
+  rolld6(numofdice: any, dicetype: number){
     if(Number(numofdice) < 0){
       alert("Please enter a value greater than 0");
       return
@@ -67,7 +67,7 @@ export class MainComponent implements OnInit {
       return
     }
     this.d6total = 0;
-    this.diceservice.rolld6(Number(numofdice)).subscribe(
+    this.diceservice.rolldice(Number(numofdice), dicetype).subscribe(
       (resp) =>{
         this.d6values = resp
         console.log(this.d6values)
@@ -81,7 +81,7 @@ export class MainComponent implements OnInit {
     );
   }
 
-  rolld8(numofdice: any){
+  rolld8(numofdice: any, dicetype: number){
     if(Number(numofdice) < 0){
       alert("Please enter a value greater than 0");
       return
@@ -91,7 +91,7 @@ export class MainComponent implements OnInit {
       return
     }
     this.d8total = 0;
-    this.diceservice.rolld8(Number(numofdice)).subscribe(
+    this.diceservice.rolldice(Number(numofdice), dicetype).subscribe(
       (resp) =>{
         this.d8values = resp
         console.log(this.d8values)
@@ -104,7 +104,7 @@ export class MainComponent implements OnInit {
       }
     );
   }
-  rolld10(numofdice: any){
+  rolld10(numofdice: any, dicetype: number){
     if(Number(numofdice) < 0){
       alert("Please enter a value greater than 0");
       return
@@ -114,7 +114,7 @@ export class MainComponent implements OnInit {
       return
     }
     this.d10total = 0;
-    this.diceservice.rolld10(Number(numofdice)).subscribe(
+    this.diceservice.rolldice(Number(numofdice), dicetype).subscribe(
       (resp) =>{
         this.d10values = resp
         console.log(this.d10values)
@@ -127,7 +127,7 @@ export class MainComponent implements OnInit {
       }
     );
   }
-  rolld12(numofdice: any){
+  rolld12(numofdice: any, dicetype: number){
     if(Number(numofdice) < 0){
       alert("Please enter a value greater than 0");
       return
@@ -137,7 +137,7 @@ export class MainComponent implements OnInit {
       return
     }
     this.d12total = 0;
-    this.diceservice.rolld12(Number(numofdice)).subscribe(
+    this.diceservice.rolldice(Number(numofdice), dicetype).subscribe(
       (resp) =>{
         this.d12values = resp
         console.log(this.d12values)
@@ -150,7 +150,7 @@ export class MainComponent implements OnInit {
       }
     );
   }
-  rolld20(numofdice: any){
+  rolld20(numofdice: any, dicetype: number){
     if(Number(numofdice) < 0){
       alert("Please enter a value greater than 0");
       return
@@ -160,7 +160,7 @@ export class MainComponent implements OnInit {
       return
     }
     this.d20total = 0;
-    this.diceservice.rolld20(Number(numofdice)).subscribe(
+    this.diceservice.rolldice(Number(numofdice), dicetype).subscribe(
       (resp) =>{
         this.d20values = resp
         console.log(this.d20values)
@@ -173,7 +173,7 @@ export class MainComponent implements OnInit {
       }
     );
   }
-  rolld100(numofdice: any){
+  rolld100(numofdice: any, dicetype: number){
     if(Number(numofdice) < 0){
       alert("Please enter a value greater than 0");
       return
@@ -183,7 +183,7 @@ export class MainComponent implements OnInit {
       return
     }
     this.d100total = 0;
-    this.diceservice.rolld100(Number(numofdice)).subscribe(
+    this.diceservice.rolldice(Number(numofdice), dicetype).subscribe(
       (resp) =>{
         this.d100values = resp
         console.log(this.d100values)
